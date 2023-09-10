@@ -25,12 +25,14 @@ if (!existingAdmin) {
   
   const hashPassword = bcryptjs.hashSync(process.env.ADMIN_PASSWORD, 10);
   const admin = new User({
-    name: "admin",
-    email: "admin@gmail.com",
+    name: "govind rajput",
+    email: process.env.ADMIN_EMAIL,
     phone: 7470990427,
-    birthDate: "3-7-2002",
+    birthDate: "09-08-2001",
     password: hashPassword,
     role: adminRoleId._id,
+    isOrganizer:false,
+    isDeleted:false
   });
   await admin.save();
 }
