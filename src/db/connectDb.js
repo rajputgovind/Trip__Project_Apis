@@ -6,6 +6,7 @@ const connectDb = async()=>{
         // await mongoose.connect(process.env.MONGO_URI)
         
         //govindrajput7649@gmail.com walauri
+        // console.log("hello")
         await mongoose.connect(process.env.MONGODB_URI)
          
         console.log(`Database connected successfully....`)
